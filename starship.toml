@@ -1,0 +1,259 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[┌─](none)$username$hostname$time$directory$git_branch$git_status$php$cmd_duration$status
+[└\\$](none) """
+
+add_newline = false
+
+[username]
+#style_root = '(bg:red)'
+#style_user = '#4979ef'
+style_user = 'none'
+show_always = true
+format = '[\(](none)[$user@]($style)'
+
+[hostname]
+ssh_symbol = ""
+#style = '#4979ef'
+style = 'none'
+disabled = false
+ssh_only = false
+format = '[$hostname]($style)[\)](none)'
+
+[time]
+disabled = false
+time_format = '%T'
+#style = 'bg:none fg:#9ec7bb'
+#style = 'bg:none fg:none'
+format = '[\[](none)[$time]($style)[\]](none)'
+
+[directory]
+#style = '#9ec7bb'
+#style = 'none'
+format = '[\[](none)[$path]($style)[$read_only]($read_only_style)[\]](none)'
+read_only = " 󰌾"
+truncation_length = 8
+truncate_to_repo = false
+truncation_symbol = '…/'
+
+[git_branch]
+always_show_remote = true
+truncation_length = 10
+symbol = ""
+style = 'none'
+format = '[\[](none)[$symbol $branch(:$remote_branch)]($style)[\]](none)'
+
+[git_status]
+style = ''
+staged = '${count} '
+ahead = '${count} '
+behind = '${count} '
+modified = '${count} '
+deleted = '${count} '
+untracked = '${count} '
+renamed = '${count} '
+conflicted = '${conflicted} '
+format = '((\[ [(M:$modified)(U:$untracked)(D:$deleted)(S:$staged)(R:$renamed)(A:$ahead)(B:behind)(C:$conflicted)](none))\])(none)'
+
+[cmd_duration]
+style = 'none'
+format = '[\[](none)[( $duration)]($style)[\]](none)'
+min_time = 5000
+
+[character]
+success_symbol = '[➜](bold green) '
+error_symbol = '[✗](bold red) '
+
+[status]
+#style = '#042903'
+style = 'none'
+success_symbol = '󰚭'
+symbol = '🔥'
+format = '[ $symbol]($style)'
+map_symbol = false
+disabled = false
+
+[os]
+format = "$symbol "
+disabled = true
+
+[php]
+style = 'none'
+format = '-\[PHP\]'
+detect_files = ['composer.json']
+disabled = false
+
+[docker_context]
+format = "via [$symbol $context](blue bold)"
+detect_files = ['docker-compose.yml']
+symbol = " "
+disabled = false
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = '[🍒 PICKING](bold red)'
+
+[line_break]
+disabled = true
+
+[sudo]
+disabled = false
+
+[aws]
+disabled = true
+symbol = "  "
+
+[buf]
+symbol = " "
+disabled = true
+
+[c]
+symbol = " "
+disabled = true
+
+
+[conda]
+symbol = " "
+disabled = true
+
+
+[dart]
+symbol = " "
+disabled = true
+
+[elixir]
+disabled = true
+symbol = " "
+
+[elm]
+disabled = true
+symbol = " "
+
+[fossil_branch]
+disabled = true
+symbol = " "
+
+[golang]
+disabled = true
+symbol = " "
+
+[guix_shell]
+disabled = true
+symbol = " "
+
+[haskell]
+disabled = true
+symbol = " "
+
+[haxe]
+disabled = true
+symbol = " "
+
+[hg_branch]
+disabled = true
+symbol = " "
+
+[java]
+disabled = true
+symbol = " "
+
+[julia]
+disabled = true
+symbol = " "
+
+[lua]
+disabled = true
+symbol = " "
+
+[memory_usage]
+disabled = true
+symbol = "󰍛 "
+
+[meson]
+disabled = true
+symbol = "󰔷 "
+
+[nim]
+disabled = true
+symbol = "󰆥 "
+
+[nix_shell]
+disabled = true
+symbol = " "
+
+[nodejs]
+disabled = true
+symbol = " "
+
+[package]
+disabled = true
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
+disabled = true
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+disabled = true
+
+[ruby]
+symbol = " "
+disabled = true
+
+[rust]
+symbol = " "
+disabled = true
+
+[scala]
+symbol = " "
+disabled = true
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
